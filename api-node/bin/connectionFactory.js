@@ -10,9 +10,9 @@ function connection() {
   })
   return pool
 }
-module.exports = function () {
-  query: (text, params, callback) => {
-    return pool.query(text, params, callback)
-  }
+module.exports = () => {
+    query: (text, params, callback) => {
+        return pool.query(text, params, callback)
+     }
   return connection;
 }
